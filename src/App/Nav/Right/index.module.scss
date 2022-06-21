@@ -1,0 +1,12 @@
+@use './desktop.scss' as desktop;
+
+.root {
+  @media screen and (min-aspect-ratio: 1 / 1) {
+    @include desktop.root;
+  }
+  .sectionWrapper {
+    @media screen and (min-aspect-ratio: 1 / 1) {
+      @include desktop.sectionWrapper;
+    }
+  }
+}

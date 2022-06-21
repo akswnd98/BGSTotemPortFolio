@@ -1,0 +1,30 @@
+@use '../../desktop.scss' as appDesktop;
+
+.root {
+  width: 100%;
+  background-color: #d9d9d9;
+  overflow: hidden;
+  font-family: NotoSansKR;
+  .wrapper {
+    margin-left: appDesktop.$left-right-margin;
+    margin-right: appDesktop.$left-right-margin;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    width: calc(100% - appDesktop.$left-right-margin * 2);
+    .title {
+      font-size: 64px;
+      font-weight: bold;
+    }
+    .pictograms {
+      margin-top: 150px;
+      display: flex;
+      justify-content: left;
+      align-items: top;
+      .pictogramsRowWrapper {
+        &:not(:first-child) {
+          margin-left: 80px;
+        }
+      }
+    }
+  }
+}

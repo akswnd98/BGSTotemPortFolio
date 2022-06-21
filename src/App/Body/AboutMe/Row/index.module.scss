@@ -1,0 +1,7 @@
+.root {
+  .pictogramWrapper {
+    &:not(:first-child) {
+      margin-top: 60px;
+    }
+  }
+}

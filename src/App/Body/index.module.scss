@@ -1,0 +1,11 @@
+@use './desktop.scss' as desktop;
+@use '../desktop.scss' as appDesktop;
+
+@media screen and (min-aspect-ratio: 1 / 1) {
+  .root {
+    width: 100%;
+    .sectionWrapper {
+      width: 100%;
+    }
+  }
+}

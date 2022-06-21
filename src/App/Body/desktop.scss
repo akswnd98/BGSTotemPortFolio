@@ -1,0 +1,7 @@
+$top-bottom-margin: 200px;
+
+@mixin sectionWrapper {
+  margin-top: $top-bottom-margin;
+  margin-bottom: $top-bottom-margin;
+  background-color: aqua;
+}

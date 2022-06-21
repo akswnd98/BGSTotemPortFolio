@@ -1,0 +1,11 @@
+@use '../desktop.scss' as appDesktop;
+
+@mixin layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: appDesktop.$left-right-margin;
+  margin-right: appDesktop.$left-right-margin;
+  width: calc(100% - appDesktop.$left-right-margin * 2);
+  height: 100%;
+}
