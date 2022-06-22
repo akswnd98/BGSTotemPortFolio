@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styles from './index.module.scss';
 import Project from './Project';
 import randomYoutubeScreenshot from '@/assets/images/random-youtube-screenshot.png';
@@ -11,10 +11,19 @@ import mariadbBadge from '@/assets/images/mariadb-badge.svg';
 import seleniumBadge from '@/assets/images/selenium-badge.svg';
 import codemirrorBadge from '@/assets/images/codemirror-badge.svg';
 import reactBadge from '@/assets/images/react-badge.svg';
+import { useStore } from '@/src/zustand/SetScrollTopToProjects';
 
 function Projects () {
+  const setInterface = useStore((state) => state.setInterface);
+  const ref = useRef(null);
+  setInterface(() => {
+    if (ref.current !== null) {
+      window.scrollTo(0, (ref.current as HTMLDivElement).offsetTop);
+    }
+  });
+
   return (
-    <div className={styles.root}>
+    <div className={styles.root} ref={ref}>
       <div className={styles.wrapper}>
         <div className={styles.title}>Projects</div>
         <div className={styles.projectsWrapper}>

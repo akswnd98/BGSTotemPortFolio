@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styles from './index.module.scss';
 import Row from './Row';
 import person from '@/assets/images/person-pictogram.svg';
@@ -7,10 +7,19 @@ import calendar from '@/assets/images/calendar-pictogram.svg';
 import mail from '@/assets/images/mail-pictogram.svg';
 import star from '@/assets/images/star-pictogram.svg';
 import github from '@/assets/images/github-pictogram.svg';
+import { useStore } from '@/src/zustand/SetScrollTopToAboutMe';
 
 function AboutMe () {
+  const ref = useRef(null);
+  const setInterface = useStore((state) => state.setInterface);
+  setInterface(() => {
+    if (ref.current !== null) {
+      window.scrollTo(0, (ref.current as HTMLDivElement).offsetTop);
+    }
+  });
+
   return (
-    <div className={styles.root}>
+    <div className={styles.root} ref={ref}>
       <div className={styles.wrapper}>
         <p className={styles.title}>Aboue me</p>
         <div className={styles.pictograms}>

@@ -22,8 +22,8 @@ function Card (props: PropsType) {
     <div className={styles.root}>
       <Slider {...settings}>
         {props.screenshots.map((v, i) => (
-          <div>
-            <div key={i} className={styles.imgWrapper}>
+          <div key={i}>
+            <div className={styles.imgWrapper}>
               <img src={v} />
             </div>
           </div>

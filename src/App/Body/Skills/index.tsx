@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styles from './index.module.scss';
 import Part from './Part';
 import htmlSkill from '@/assets/images/html-skill.svg';
@@ -14,10 +14,19 @@ import figmaSkill from '@/assets/images/figma-skill.svg';
 import pwaSkill from '@/assets/images/pwa-skill.svg';
 import gitSkill from '@/assets/images/git-skill.svg';
 import cppSkill from '@/assets/images/cpp-skill.svg';
+import { useStore } from '@/src/zustand/SetScrollTopToSkills';
 
 function Skills () {
+  const setInterface = useStore((state) => state.setInterface);
+  const ref = useRef(null);
+  setInterface(() => {
+    if (ref.current !== null) {
+      window.scrollTo(0, (ref.current as HTMLDivElement).offsetTop);
+    }
+  });
+
   return (
-    <div className={styles.root}>
+    <div className={styles.root} ref={ref}>
       <div className={styles.wrapper}>
         <div className={styles.title}>Skills</div>
         <div className={styles.parts}>
