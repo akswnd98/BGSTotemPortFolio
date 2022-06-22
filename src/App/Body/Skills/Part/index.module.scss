@@ -1,0 +1,17 @@
+.root {
+  width: 300px;
+  .partName {
+    font-size: 36px;
+    font-weight: bold;
+  }
+  .badges {
+    display: flex;
+    justify-content: left;
+    align-items: top;
+    flex-wrap: wrap;
+    img {
+      margin-top: 20px;
+      margin-right: 20px;
+    }
+  }
+}

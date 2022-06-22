@@ -1,0 +1,27 @@
+@use '../desktop.scss' as bodyDesktop;
+@use '../../desktop.scss' as appDesktop;
+
+.root {
+  width: 100%;
+  overflow: hidden;
+  font-family: NotoSansKR;
+  .wrapper {
+    margin-top: bodyDesktop.$top-bottom-margin;
+    margin-bottom: bodyDesktop.$top-bottom-margin;
+    margin-left: appDesktop.$left-right-margin;
+    width: calc(100% - appDesktop.$left-right-margin * 2);
+    margin-right: appDesktop.$left-right-margin;
+    .title {
+      font-size: 64px;
+      font-weight: bold;
+    }
+    .projectsWrapper {
+      margin-top: 150px;
+      .projectWrapper {
+        &:not(:first-child) {
+          margin-top: 100px;
+        }
+      }
+    }
+  }
+}

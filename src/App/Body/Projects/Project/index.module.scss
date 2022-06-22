@@ -1,0 +1,45 @@
+.root {
+  display: flex;
+  justify-content: left;
+  align-items: top;
+  .cardWrapper {
+
+  }
+  .rightWrapper {
+    margin-left: 20px;
+    .title {
+      font-size: 44px;
+      font-weight: bold;
+    }
+    .date {
+      font-size: 20px;
+      margin-top: 8px;
+    }
+    .description {
+      white-space: pre-wrap;
+      font-size: 24px;
+      margin-top: 30px;
+    }
+    .urls {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      margin-top: 60px;
+      a {
+        width: 48px;
+        height: 48px;
+        &:not(:first-child) {
+          margin-left: 20px;
+        }
+      }
+    }
+    .skillStacks {
+      margin-top: 30px;
+      img {
+        &:not(:first-child) {
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+}

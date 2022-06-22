@@ -12,6 +12,7 @@ module.exports = {
   },
   resolve: {
     alias: {
+      '@': path.resolve(__dirname),
       '@/src': path.resolve(__dirname, 'src'),
       '@/assets': path.resolve(__dirname, 'assets'),
     },
@@ -42,13 +43,20 @@ module.exports = {
           filename: 'assets/fonts/[hash][name][ext]',
         },
       }, {
-        test: /\.(css|scss)$/,
+        test: /\.(css)$/,
+        use: [
+          'style-loader',
+          'css-loader',
+        ],
+        // exclude: /node_module/,
+      }, {
+        test: /\.(scss)$/,
         use: [
           'style-loader',
           'css-loader',
           'sass-loader',
         ],
-        exclude: /node_module/,
+        // exclude: /node_module/,
       },
     ],
   },

@@ -1,0 +1,24 @@
+@use '../../desktop.scss' as appDesktop;
+@use '../desktop.scss' as bodyDesktop;
+
+.root {
+  width: 100%;
+  overflow: hidden;
+  .wrapper {
+    margin-top: bodyDesktop.$top-bottom-margin;
+    margin-bottom: bodyDesktop.$top-bottom-margin;
+    margin-left: appDesktop.$left-right-margin;
+    margin-right: appDesktop.$left-right-margin;
+    width: calc(100% - appDesktop.$left-right-margin * 2);
+    .title {
+      font-size: 64px;
+      font-weight: bold;
+    }
+    .parts {
+      display: flex;
+      justify-content: left;
+      align-items: top;
+      margin-top: 150px;
+    }
+  }
+}

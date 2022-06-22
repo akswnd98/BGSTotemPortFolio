@@ -1,0 +1,23 @@
+$size: 500px;
+
+.root {
+  background-color: #d9d9d9;
+  width: $size;
+  height: $size;
+  position: relative;
+  .imgWrapper {
+    width: $size;
+    height: calc($size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 100%;
+    }
+  }
+  .fullscreenButton {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+  }
+}

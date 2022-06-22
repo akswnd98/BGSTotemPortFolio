@@ -10,8 +10,8 @@ function Row (props: PropsType) {
   return (
     <div className={styles.root}>
       {
-        props.pictogramProps.map((v) => (
-          <div className={styles.pictogramWrapper}>
+        props.pictogramProps.map((v, i) => (
+          <div key={i} className={styles.pictogramWrapper}>
             <Pictogram icon={v.icon} label={v.label} value={v.value} />
           </div>
         ))
