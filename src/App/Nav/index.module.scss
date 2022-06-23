@@ -1,4 +1,5 @@
 @use './desktop.scss' as desktop;
+@use './mobile.scss' as mobile;
 
 .root {
   width: 100%;
@@ -9,8 +10,15 @@
   position: fixed;
   z-index: 200;
   .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
     @media screen and (min-aspect-ratio: 1 / 1) {
       @include desktop.layout;
+    }
+    @media screen and (max-aspect-ratio: 1 / 1) {
+      @include mobile.layout;
     }
   }
 }

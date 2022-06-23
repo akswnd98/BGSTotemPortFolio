@@ -1,25 +1,47 @@
 @use '../desktop.scss' as bodyDesktop;
 @use '../../desktop.scss' as appDesktop;
+@use '../mobile.scss' as bodyMobile;
+@use '../../mobile.scss' as appMobile;
 
 .root {
   width: 100%;
   overflow: hidden;
   font-family: NotoSansKR;
   .wrapper {
-    margin-top: bodyDesktop.$top-bottom-margin;
-    margin-bottom: bodyDesktop.$top-bottom-margin;
-    margin-left: appDesktop.$left-right-margin;
-    width: calc(100% - appDesktop.$left-right-margin * 2);
-    margin-right: appDesktop.$left-right-margin;
+    @media screen and (min-aspect-ratio: 1 / 1) {
+      @include bodyDesktop.layout;
+    }
+    @media screen and (max-aspect-ratio: 1 / 1) {
+      @include bodyMobile.layout
+    }
     .title {
-      font-size: 64px;
+      @media screen and (min-aspect-ratio: 1 / 1) {
+        font-size: 64px;
+      }
+      @media screen and (max-aspect-ratio: 1 / 1) {
+        font-size: 44px;
+      }
       font-weight: bold;
     }
-    .projectsWrapper {
+    .desktopsWrapper {
+      @media screen and (max-aspect-ratio: 1 / 1) {
+        display: none;
+      }
       margin-top: 150px;
-      .projectWrapper {
+      .desktopWrapper {
         &:not(:first-child) {
           margin-top: 100px;
+        }
+      }
+    }
+    .mobilesWrapper {
+      @media screen and (min-aspect-ratio: 1 / 1) {
+        display: none;
+      }
+      margin-top: 60px;
+      .mobileWrapper {
+        &:not(:first-child) {
+          margin-top: 40px;
         }
       }
     }

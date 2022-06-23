@@ -1,17 +1,46 @@
 .root {
-  width: 300px;
+  @media screen and (min-aspect-ratio: 1 / 1) {
+    width: 300px
+  }
+  @media screen and (max-aspect-ratio: 1 / 1) {
+    width: 100%;
+  }
   .partName {
-    font-size: 36px;
+    @media screen and (min-aspect-ratio: 1 / 1) {
+      font-size: 36px;
+    }
+    @media screen and (max-aspect-ratio: 1 / 1) {
+      text-align: center;
+      font-size: 32px;
+    }
     font-weight: bold;
   }
-  .badges {
-    display: flex;
-    justify-content: left;
-    align-items: top;
-    flex-wrap: wrap;
-    img {
-      margin-top: 20px;
-      margin-right: 20px;
+  .badgesWrapper {
+    @media screen and (max-aspect-ratio: 1 / 1) {
+      margin-top: 30px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .badges {
+      display: flex;
+      align-items: top;
+      flex-wrap: wrap;
+      @media screen and (min-aspect-ratio: 1 / 1) {
+        justify-content: left;
+      }
+      @media screen and (max-aspect-ratio: 1 / 1) {
+        justify-content: center;
+        width: 50%;
+        gap: 20px;
+      }
+      img {
+        @media screen and (min-aspect-ratio: 1 / 1) {
+          margin-top: 20px;
+          margin-right: 20px;
+        }
+      }
     }
   }
 }

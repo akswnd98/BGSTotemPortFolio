@@ -1,4 +1,5 @@
 @use '../../desktop.scss' as appDesktop;
+@use '../../mobile.scss' as appMobile;
 
 .root {
   width: 100%;
@@ -6,24 +7,41 @@
   overflow: hidden;
   font-family: NotoSansKR;
   .wrapper {
-    margin-left: appDesktop.$left-right-margin;
-    margin-right: appDesktop.$left-right-margin;
-    margin-top: 200px;
-    margin-bottom: 200px;
-    width: calc(100% - appDesktop.$left-right-margin * 2);
+    @media screen and (min-aspect-ratio: 1 / 1) {
+      margin-left: appDesktop.$left-right-margin;
+      margin-right: appDesktop.$left-right-margin;
+      margin-top: calc(200px + 5rem);
+      margin-bottom: 200px;
+      width: calc(100% - appDesktop.$left-right-margin * 2);
+    }
+    @media screen and (max-aspect-ratio: 1 / 1) {
+      margin-left: appMobile.$left-right-margin;
+      margin-right: appMobile.$left-right-margin;
+      margin-top: calc(100px + 5rem);
+      margin-bottom: 100px;
+      width: calc(100% - appMobile.$left-right-margin * 2);
+    }
     .title {
-      font-size: 64px;
       font-weight: bold;
+      @media screen and (min-aspect-ratio: 1 / 1) {
+        font-size: 64px;
+      }
+      @media screen and (max-aspect-ratio: 1 / 1) {
+        font-size: 44px;
+      }
     }
     .pictograms {
-      margin-top: 150px;
       display: flex;
       justify-content: left;
       align-items: top;
-      .pictogramsRowWrapper {
-        &:not(:first-child) {
-          margin-left: 80px;
-        }
+      flex-wrap: wrap;
+      @media screen and (min-aspect-ratio: 1 / 1) {
+        margin-top: 150px;
+        gap: 60px;
+      }
+      @media screen and (max-aspect-ratio: 1 / 1) {
+        margin-top: 60px;
+        gap: 40px;
       }
     }
   }

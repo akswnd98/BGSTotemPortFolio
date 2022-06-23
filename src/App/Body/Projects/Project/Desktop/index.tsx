@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from './Card';
+import Card from '../Card';
 import styles from './index.module.scss';
 import githubProjectUrl from '@/assets/images/github-project-url.svg';
 import webProjectUrl from '@/assets/images/web-project-url.svg';
@@ -14,7 +14,7 @@ export type PropsType = {
   skillStacks: string[];
 }
 
-function Project (props: PropsType) {
+function Desktop (props: PropsType) {
   return (
     <div className={styles.root}>
       <div className={styles.cardWrapper}>
@@ -40,4 +40,4 @@ function Project (props: PropsType) {
   );
 }
 
-export default Project;
+export default Desktop;

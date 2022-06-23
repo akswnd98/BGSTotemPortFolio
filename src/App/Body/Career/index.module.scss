@@ -1,25 +1,39 @@
 @use '../../desktop.scss' as appDesktop;
 @use '../desktop.scss' as bodyDesktop;
+@use '../../mobile.scss' as appMobile;
+@use '../mobile.scss' as bodyMobile;
 
 .root {
   width: 100%;
   overflow: hidden;
   background-color: #d9d9d9;
   .wrapper {
-    margin-left: appDesktop.$left-right-margin;
-    margin-right: appDesktop.$left-right-margin;
-    margin-top: bodyDesktop.$top-bottom-margin;
-    margin-bottom: bodyDesktop.$top-bottom-margin;
-    width: calc(100% - appDesktop.$left-right-margin * 2);
+    @media screen and (min-aspect-ratio: 1 / 1) {
+      @include bodyDesktop.layout;
+    }
+    @media screen and (max-aspect-ratio: 1 / 1) {
+      @include bodyMobile.layout;
+    }
     .title {
-      font-size: 64px;
+      @media screen and (min-aspect-ratio: 1 / 1) {
+        font-size: 64px;
+      }
+      @media screen and (max-aspect-ratio: 1 / 1) {
+        font-size: 44px;
+      }
       font-weight: bold;
     }
     .preparring {
-      margin-top: 150px;
+      @media screen and (min-aspect-ratio: 1 / 1) {
+        margin-top: 150px;
+        font-size: 44px;
+      }
+      @media screen and (max-aspect-ratio: 1 / 1) {
+        margin-top: 60px;
+        font-size: 36px;
+      }
       width: 100%;
       text-align: center;
-      font-size: 44px;
     }
   }
 }

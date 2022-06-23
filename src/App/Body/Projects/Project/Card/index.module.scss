@@ -1,13 +1,26 @@
-$size: 500px;
+$desktop-size: 500px;
+$mobile-size: 100%;
 
 .root {
-  background-color: #d9d9d9;
-  width: $size;
-  height: $size;
+  @media screen and (min-aspect-ratio: 1 / 1) {
+    width: $desktop-size;
+    height: $desktop-size;
+  }
+  @media screen and (max-aspect-ratio: 1 / 1) {
+    width: $mobile-size;
+    aspect-ratio: 1 / 1;
+  }
   position: relative;
+  background-color: #d9d9d9;
   .imgWrapper {
-    width: $size;
-    height: calc($size);
+    @media screen and (min-aspect-ratio: 1 / 1) {
+      width: $desktop-size;
+      height: $desktop-size;
+    }
+    @media screen and (max-aspect-ratio: 1 / 1) {
+      width: $mobile-size;
+      aspect-ratio: 1 / 1;
+    }
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,5 +32,8 @@ $size: 500px;
     position: absolute;
     bottom: 8px;
     right: 8px;
+    @media screen and (max-aspect-ratio: 1 / 1) {
+      display: none;
+    }
   }
 }

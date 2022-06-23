@@ -1,0 +1,7 @@
+@use '../mobile.scss' as appMobile;
+
+@mixin layout {
+  margin-left: appMobile.$left-right-margin;
+  margin-right: appMobile.$left-right-margin;
+  width: calc(100% - appMobile.$left-right-margin * 2);
+}

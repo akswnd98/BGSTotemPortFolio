@@ -1,15 +1,25 @@
-@use './desktop.scss' as desktop;
-
 .root {
-  @media screen and (min-aspect-ratio: 1 / 1) {
-    @include desktop.root;
-  }
+  display: flex;
+  justify-content: right;
+  align-items: center;
   .sectionWrapper {
+    margin-left: 40px;
+    &:hover {
+      cursor: pointer;
+    }
     @media screen and (min-aspect-ratio: 1 / 1) {
-      @include desktop.sectionWrapper;
-      &:hover {
-        cursor: pointer;
-      }
+      display: block;
+    }
+    @media screen and (max-aspect-ratio: 1 / 1) {
+      display: none;
+    }
+  }
+  .menuWrapper {
+    @media screen and (min-aspect-ratio: 1 / 1) {
+      display: none;
+    }
+    @media screen and (max-aspect-ratio: 1 / 1) {
+      display: block;
     }
   }
 }

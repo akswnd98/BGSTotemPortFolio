@@ -30,11 +30,21 @@ function Skills () {
       <div className={styles.wrapper}>
         <div className={styles.title}>Skills</div>
         <div className={styles.parts}>
-          <Part partName={'Frontend'} skillPictograms={[htmlSkill, jsSkill, reactSkill, zustandSkill, codemirrorSkill]} />
-          <Part partName={'Backend'} skillPictograms={[nodejsSkill, sequelizeSkill, expressSkill, mariadbSkill]} />
-          <Part partName={'Design'} skillPictograms={[figmaSkill]} />
-          <Part partName={'Cross platform'} skillPictograms={[pwaSkill]} />
-          <Part partName={'etc'} skillPictograms={[gitSkill, cppSkill]} />
+          <div className={styles.partWrapper}>
+            <Part partName={'Frontend'} skillPictograms={[htmlSkill, jsSkill, reactSkill, zustandSkill, codemirrorSkill]} />
+          </div>
+          <div className={styles.partWrapper}>
+            <Part partName={'Backend'} skillPictograms={[nodejsSkill, sequelizeSkill, expressSkill, mariadbSkill]} />
+          </div>
+          <div className={styles.partWrapper}>
+            <Part partName={'Design'} skillPictograms={[figmaSkill]} />
+          </div>
+          <div className={styles.partWrapper}>
+            <Part partName={'Cross platform'} skillPictograms={[pwaSkill]} />
+          </div>
+          <div className={styles.partWrapper}>
+            <Part partName={'etc'} skillPictograms={[gitSkill, cppSkill]} />
+          </div>
         </div>
       </div>
     </div>

@@ -1,7 +1,11 @@
+@use '../desktop.scss' as appDesktop;
+
 $top-bottom-margin: 200px;
 
-@mixin sectionWrapper {
+@mixin layout {
+  margin-left: appDesktop.$left-right-margin;
+  margin-right: appDesktop.$left-right-margin;
   margin-top: $top-bottom-margin;
   margin-bottom: $top-bottom-margin;
-  background-color: aqua;
+  width: calc(100% - appDesktop.$left-right-margin * 2); 
 }

@@ -1,24 +1,50 @@
 @use '../../desktop.scss' as appDesktop;
 @use '../desktop.scss' as bodyDesktop;
+@use '../../mobile.scss' as appMobile;
+@use '../mobile.scss' as bodyMobile;
 
 .root {
   width: 100%;
   overflow: hidden;
   .wrapper {
-    margin-top: bodyDesktop.$top-bottom-margin;
-    margin-bottom: bodyDesktop.$top-bottom-margin;
-    margin-left: appDesktop.$left-right-margin;
-    margin-right: appDesktop.$left-right-margin;
-    width: calc(100% - appDesktop.$left-right-margin * 2);
+    @media screen and (min-aspect-ratio: 1 / 1) {
+      @include bodyDesktop.layout;
+    }
+    @media screen and (max-aspect-ratio: 1 / 1) {
+      @include bodyMobile.layout;
+    }
     .title {
-      font-size: 64px;
+      @media screen and (min-aspect-ratio: 1 / 1) {
+        font-size: 64px;
+      }
+      @media screen and (max-aspect-ratio: 1 / 1) {
+        font-size: 44px;
+      }
       font-weight: bold;
     }
     .parts {
+      @media screen and (min-aspect-ratio: 1 / 1) {
+        margin-top: 150px;
+      }
+      @media screen and (max-aspect-ratio: 1 / 1) {
+        margin-top: 60px;
+        width: 100%;
+      }
       display: flex;
       justify-content: left;
       align-items: top;
-      margin-top: 150px;
+      flex-wrap: wrap;
+      .partWrapper {
+        @media screen and (max-aspect-ratio: 1 / 1) {
+          width: 100%;
+          background-color: #d9d9d980;
+          padding-top: 20px;
+          padding-bottom: 20px;
+          &:not(:first-child) {
+            margin-top: 8px;
+          }
+        }
+      }
     }
   }
 }

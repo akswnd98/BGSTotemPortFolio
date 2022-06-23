@@ -1,0 +1,11 @@
+@use '../mobile.scss' as appMobile;
+
+$top-bottom-margin: 100px;
+
+@mixin layout {
+  margin-left: appMobile.$left-right-margin;
+  margin-right: appMobile.$left-right-margin;
+  margin-top: $top-bottom-margin;
+  margin-bottom: $top-bottom-margin;
+  width: calc(100% - appMobile.$left-right-margin * 2);
+}
