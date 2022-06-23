@@ -28,17 +28,13 @@
       a {
         width: 48px;
         height: 48px;
-        &:not(:first-child) {
-          margin-left: 20px;
-        }
+        margin-right: 20px;
       }
     }
     .skillStacks {
       margin-top: 30px;
       img {
-        &:not(:first-child) {
-          margin-left: 8px;
-        }
+        margin-right: 8px;
       }
     }
   }

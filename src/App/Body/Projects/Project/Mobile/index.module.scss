@@ -12,11 +12,23 @@
   }
   .description {
     margin-top: 20px;
+    font-size: 18px;
   }
   .urls {
     margin-top: 30px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    a {
+      width: 48px;
+      height: 48px;
+      margin-right: 20px;
+    }
   }
   .skillStacks {
     margin-top: 20px;
+    img {
+      margin-right: 8px;
+    }
   }
 }
