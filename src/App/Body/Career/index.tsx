@@ -7,7 +7,7 @@ function Career () {
   const ref = useRef(null);
   setInterface(() => {
     if (ref.current !== null) {
-      window.scrollTo(0, (ref.current as HTMLDivElement).offsetTop);
+      window.scrollTo({ left: 0, top: (ref.current as HTMLDivElement).offsetTop, behavior: 'smooth' });
     }
   });
 

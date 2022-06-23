@@ -1,5 +1,8 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 module.exports = {
   entry: {
@@ -8,7 +11,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'dist'),
     filename: '[name]_bundle.js',
-    publicPath: '/',
+    publicPath: process.env.PUBLIC_PATH,
   },
   resolve: {
     alias: {
