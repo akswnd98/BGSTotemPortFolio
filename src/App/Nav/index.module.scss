@@ -4,12 +4,12 @@
 .root {
   width: 100%;
   height: 5rem;
-  background-color: #d9d9d9;
   font-family: NotoSansKR;
   font-size: 20px;
   position: fixed;
   z-index: 200;
-  .wrapper {
+  background-color: #d9d9d9;
+  .topWrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,5 +20,11 @@
     @media screen and (max-aspect-ratio: 1 / 1) {
       @include mobile.layout;
     }
+  }
+  .menuListWrapper {
+    @media screen and (min-aspect-ratio: 1 / 1) {
+      display: none;
+    }
+    overflow: hidden;
   }
 }

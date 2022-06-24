@@ -1,0 +1,44 @@
+@use './layout.scss' as layout;
+@use '../../mobile.scss' as appMobile;
+.root {
+  padding-top: layout.$height;
+  padding-left: appMobile.$left-right-margin;
+  padding-right: appMobile.$left-right-margin;
+  width: calc(100% - appMobile.$left-right-margin * 2);
+  background-color: #d9d9d9;
+  overflow: hidden;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  position: relative;
+  transform: translateY(-100%);
+}
+
+.on {
+  animation-name: slide-down;
+}
+
+.off {
+  animation-name: slide-up;
+}
+
+@keyframes slide-down {
+  from {
+    transform: translateY(-100%);
+    display: none;
+  }
+  to {
+    transform: translateY(0);
+    display: block;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(0);
+    display: block;
+  }
+  to {
+    transform: translateY(-100%);
+    display: none;
+  }
+}
