@@ -7,13 +7,17 @@ import Right from './Right';
 function Nav () {
   return (
     <div className={styles.root}>
-      <div className={styles.topWrapper}>
-        <Left />
-        <Right />
+      <div className={styles.main}>
+        <div className={styles.left}>
+          <Left />
+        </div>
+        <div className={styles.right}>
+          <Right />
+        </div>
       </div>
-      <div className={styles.menuListWrapper}>
+      {/* <div className={styles.menuListWrapper}>
         <MenuList />
-      </div>
+      </div> */}
     </div>
   );
 }

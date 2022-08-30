@@ -1,44 +1,52 @@
 .root {
-  @media screen and (min-aspect-ratio: 1 / 1) {
-    width: 300px
-  }
-  @media screen and (max-aspect-ratio: 1 / 1) {
-    width: 100%;
-  }
-  .partName {
+  box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 5%);
+  border-radius: 10px;
+  .main {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     @media screen and (min-aspect-ratio: 1 / 1) {
-      font-size: 36px;
+      width: 300px;
     }
     @media screen and (max-aspect-ratio: 1 / 1) {
-      text-align: center;
-      font-size: 32px;
-    }
-    font-weight: bold;
-  }
-  .badgesWrapper {
-    @media screen and (max-aspect-ratio: 1 / 1) {
-      margin-top: 30px;
       width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
     }
-    .badges {
-      display: flex;
-      align-items: top;
-      flex-wrap: wrap;
+    .partName {
       @media screen and (min-aspect-ratio: 1 / 1) {
-        justify-content: left;
+        font-size: 36px;
       }
       @media screen and (max-aspect-ratio: 1 / 1) {
-        justify-content: center;
-        width: 50%;
-        gap: 20px;
+        text-align: center;
+        font-size: 32px;
       }
-      img {
+      font-weight: bold;
+    }
+    .badgesWrapper {
+      @media screen and (max-aspect-ratio: 1 / 1) {
+        margin-top: 30px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .badges {
+        display: flex;
+        align-items: top;
+        flex-wrap: wrap;
         @media screen and (min-aspect-ratio: 1 / 1) {
-          margin-top: 20px;
-          margin-right: 20px;
+          justify-content: left;
+        }
+        @media screen and (max-aspect-ratio: 1 / 1) {
+          justify-content: center;
+          width: 50%;
+          gap: 20px;
+        }
+        img {
+          @media screen and (min-aspect-ratio: 1 / 1) {
+            margin-top: 20px;
+            margin-right: 20px;
+          }
         }
       }
     }

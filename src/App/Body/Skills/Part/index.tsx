@@ -9,14 +9,16 @@ export type PropsType = {
 function Part (props: PropsType) {
   return (
     <div className={styles.root}>
-      <div className={styles.partName}>{props.partName}</div>
-      <div className={styles.badgesWrapper}>
-        <div className={styles.badges}>
-          {
-            props.skillPictograms.map((v, i) => (
-              <img key={i} src={v} />
-            ))
-          }
+      <div className={styles.main}>
+        <div className={styles.partName}>{props.partName}</div>
+        <div className={styles.badgesWrapper}>
+          <div className={styles.badges}>
+            {
+              props.skillPictograms.map((v, i) => (
+                <img key={i} src={v} />
+              ))
+            }
+          </div>
         </div>
       </div>
     </div>

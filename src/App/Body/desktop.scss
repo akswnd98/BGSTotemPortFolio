@@ -1,6 +1,6 @@
 @use '../desktop.scss' as appDesktop;
 
-$top-bottom-margin: 200px;
+$top-bottom-margin: 150px;
 
 @mixin layout {
   margin-left: appDesktop.$left-right-margin;

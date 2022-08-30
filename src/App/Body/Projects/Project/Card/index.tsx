@@ -29,9 +29,9 @@ function Card (props: PropsType) {
           </div>
         ))}
       </Slider>
-      {/* <div className={styles.fullscreenButton}>
+      <div className={styles.fullscreenButton}>
         <img src={fullscreenCard} />
-      </div> */}
+      </div>
     </div>
   )
 }

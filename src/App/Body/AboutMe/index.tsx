@@ -21,7 +21,7 @@ function AboutMe () {
   return (
     <div className={styles.root} ref={ref}>
       <div className={styles.wrapper}>
-        <p className={styles.title}>Aboue me</p>
+        <p className={styles.title}>About me</p>
         <div className={styles.pictograms}>
           <div className={styles.pictogramWrapper}>
             <Pictogram icon={person} label={'이름'} value={'김만중'} />
