@@ -19,8 +19,8 @@
       width: calc(100% - appMobile.$left-right-margin * 2);
     }
     .title {
+      font-family: NixieOne;
       @media screen and (min-aspect-ratio: 1 / 1) {
-        font-family: NixieOne;
         font-size: 52px;
       }
       @media screen and (max-aspect-ratio: 1 / 1) {

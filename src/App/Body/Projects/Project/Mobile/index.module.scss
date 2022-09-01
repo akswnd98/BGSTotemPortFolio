@@ -1,10 +1,16 @@
 .root {
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 5%);
+  border-radius: 10px;
   .title {
     font-size: 24px;
     font-weight: bold;
   }
   .date {
-    font-size: 16px;
+    font-size: 14px;
     margin-top: 8px;
   }
   .cardWrapper {
@@ -12,10 +18,10 @@
   }
   .description {
     margin-top: 20px;
-    font-size: 18px;
+    font-size: 16px;
   }
   .urls {
-    margin-top: 30px;
+    margin-top: 20px;
     display: flex;
     justify-content: left;
     align-items: center;

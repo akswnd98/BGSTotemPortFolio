@@ -1,7 +1,10 @@
 @use '../mobile.scss' as appMobile;
 
-@mixin layout {
+@mixin main-layout {
   margin-left: appMobile.$left-right-margin;
   margin-right: appMobile.$left-right-margin;
   width: calc(100% - appMobile.$left-right-margin * 2);
+  height: 100%;
+  font-size: 20px;
+  font-family: NixieOne;
 }

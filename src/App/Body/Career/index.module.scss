@@ -14,9 +14,9 @@
       @include bodyMobile.layout;
     }
     .title {
+      font-family: NixieOne;
       @media screen and (min-aspect-ratio: 1 / 1) {
         font-size: 52px;
-        font-family: NixieOne;
       }
       @media screen and (max-aspect-ratio: 1 / 1) {
         font-size: 44px;

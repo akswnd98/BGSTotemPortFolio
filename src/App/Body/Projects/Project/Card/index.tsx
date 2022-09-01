@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './index.module.scss';
 import Slider from 'react-slick';
-import './slick-theme.scss';
-import './slick.scss';
+import './slick-theme.scoped.scss';
+import './slick.scoped.scss';
 import fullscreenCard from '@/assets/images/fullscreen-card.svg';
 
 export type PropsType = {

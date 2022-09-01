@@ -1,16 +1,20 @@
 @use './layout.scss' as layout;
-@use '../../mobile.scss' as appMobile;
+@use '../mobile.scss' as appMobile;
+
 .root {
   padding-top: layout.$height;
   padding-left: appMobile.$left-right-margin;
   padding-right: appMobile.$left-right-margin;
   width: calc(100% - appMobile.$left-right-margin * 2);
-  background-color: #d9d9d9;
+  // background-color: #f2f2f2;
+  background-color: white;
+  box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 5%);
   overflow: hidden;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
   position: relative;
   transform: translateY(-100%);
+  border-radius: 0px 0px 10px 10px;
 }
 
 .on {
